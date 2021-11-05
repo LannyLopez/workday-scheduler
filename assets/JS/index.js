@@ -1,18 +1,7 @@
-var task = {};
-
-var createTask = function(taskText, taskTime , taskList){
-    var taskLi = $("<li>").addClass("list-group-item");
-    var taskSpan = $("<span>").addClass("m-1").text(taskText);
-    var taskP = $("<p>").addClass("m-1").text(taskText);
-    taskLi.append(taskSpan, taskP);
-
-    $("#list-" + taskList).append(taskLi);
-}
-
-
-
-
-
+$(document).ready(function(){
+    var currentDate = moment().format("dddd, MMMM Do YYYY");
+    $("#currentDay").text(currentDate);
+})
 
 
 $(".daily-task").on("click", "p", function(){
