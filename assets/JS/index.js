@@ -3,6 +3,7 @@ $(document).ready(function(){
     $("#currentDay").text(currentDate);
 })
 
+var currentHour = moment().hour();
 
 $(".daily-task").on("click", "p", function(){
     var text = $(this)
